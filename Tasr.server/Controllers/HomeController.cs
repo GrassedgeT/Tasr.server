@@ -1,5 +1,9 @@
 ﻿using System.Net.Http.Headers;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Tasr.Models;
 using Tasr.server.Commands;
 using TheSalLab.GeneralReturnValues;
 
@@ -28,6 +32,7 @@ namespace Tasr.server.Controllers
                 return ServiceResult<string>.CreateExceptionResult(e, e.Message)
                     .ToServiceResultViewModel();
             }
+      
 
             return ServiceResult<string>.CreateSucceededResult(await response.Content.ReadAsStringAsync())
                 .ToServiceResultViewModel();
