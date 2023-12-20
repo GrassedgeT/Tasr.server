@@ -18,13 +18,13 @@ namespace Tasr.Models
     public class Sentence
     {
         [JsonPropertyName("text")]
-        string Text { get; set; }
+        public string Text { get; set; }
 
         [JsonPropertyName("start")]
-        int Start { get; set; }
+        public int Start { get; set; }
 
         [JsonPropertyName("end")]
-        int End { get; set; }
+        public int End { get; set; }
     }
 
 } 
